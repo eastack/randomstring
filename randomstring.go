@@ -1,4 +1,4 @@
-package randomstring
+package main
 
 import (
 	"math/rand"
