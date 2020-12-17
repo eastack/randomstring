@@ -11,7 +11,11 @@ const (
 	Ascii        = Alphanumeric + "~!@#$%^&*()-_+={}[]\\|<,>.?/\"';:`"
 )
 
-func Generate(length int, charset string) string {
+func Generate(length int) string {
+	return GenerateByCharset(buffer, Alphanumeric)
+}
+
+func GenerateByCharset(length int, charset string) string {
 	buffer := make([]byte, length)
 	for i := 0; i < length; i++ {
 		buffer[i] = charset[rand.Intn(len(charset))]
