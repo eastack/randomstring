@@ -12,7 +12,7 @@ const (
 )
 
 func Generate(length int) string {
-	return GenerateByCharset(buffer, Alphanumeric)
+	return GenerateByCharset(length, Alphanumeric)
 }
 
 func GenerateByCharset(length int, charset string) string {
